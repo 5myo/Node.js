@@ -1,0 +1,46 @@
+<script type="text/javascript">
+	var won = '1000';
+	var result = '이 과자는 '+ won + '원입니다';
+	//이 과자는 1000원입니다.
+
+	const result = '이 과자는 ${won}원입니다';
+	//이 과자는 1000원입니다.
+
+	function a() {}
+	a();
+	a'';
+
+	//객체 리터럴(옛날 버전)
+	var sayNode = function() {
+		console.log('Node');
+	};
+	var es = 'ES';
+
+
+
+	var oldObject = {
+		sayJs: function() {
+			console.log('JS');
+		},
+		sayNode: sayNode, //키 : 값(변수) 이름
+	};
+	//[es + 6] 동적 속성, 변수를 속성명으로 사용
+	oldObject[es + 6]='Fantastic';
+	oldObject.sayNode(); //Node
+	oldObject.sayJs(); //JS
+	oldObject.log(oldObject.ES6); //Fantastic
+
+	//객체 리터럴(바뀐 버전)
+	const newObject = { 
+		sayJS() {
+			console.log('JS');
+		},
+		sayNode,
+		[es+6]: 'Fantastic', //동적 속성을 newObject 객체 안에 넣었다
+	};
+
+	newObject.sayNode(); //Node
+	newObject.sayJS(); //JS
+	console.log(newObject.ES6); //Fantastic
+
+</script>
